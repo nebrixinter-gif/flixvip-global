@@ -8,7 +8,7 @@ export const TMDB_KEYS = [
 export const TMDB_BASE = 'https://api.themoviedb.org/3';
 export const IMG_BASE = 'https://image.tmdb.org/t/p';
 
-export const KIWIFY_LINK = 'https://kiwify.app/K5rE2km';
+export const KIWIFY_LINK = 'https://pay.kiwify.com.br/mH6L0om';
 
 // Fallback movie/series data in case TMDB fails
 export const FALLBACK_MOVIES = [
