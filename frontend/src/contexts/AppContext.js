@@ -46,7 +46,18 @@ export function AppProvider({ children }) {
     })();
   }, []);
 
-  const changeLang = (l) => { setLang(l); localStorage.setItem('nf_lang', l); };
+  // Default currency per language when user manually switches language
+  const LANG_TO_CURRENCY = {
+    'pt-BR': 'BRL', 'en': 'USD', 'es': 'EUR', 'fr': 'EUR', 'de': 'EUR', 'it': 'EUR', 'ja': 'JPY'
+  };
+
+  const changeLang = (l) => {
+    setLang(l);
+    localStorage.setItem('nf_lang', l);
+    const cur = LANG_TO_CURRENCY[l] || 'USD';
+    setCurrency(cur);
+    localStorage.setItem('nf_currency', cur);
+  };
   const changeCurrency = (c) => { setCurrency(c); localStorage.setItem('nf_currency', c); };
 
   const login = (email) => {

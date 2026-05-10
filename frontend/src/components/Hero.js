@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
-import { t } from '../i18n/translations';
+import { t, formatPrice } from '../i18n/translations';
 
 export default function Hero() {
-  const { lang } = useApp();
+  const { lang, currency } = useApp();
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
 
@@ -35,7 +35,11 @@ export default function Hero() {
           {t(lang, 'hero_title')}
         </h1>
         <p className="text-white text-xl md:text-2xl mt-5 font-medium">
-          {t(lang, 'hero_subtitle')}
+          {lang === 'pt-BR'
+            ? `Por apenas ${formatPrice(4.15, currency, lang)}/mês. Cancele quando quiser.`
+            : lang === 'es'
+            ? `Desde ${formatPrice(4.15, currency, lang)}/mes. Cancela cuando quieras.`
+            : `Starts at ${formatPrice(4.15, currency, lang)}/month. Cancel anytime.`}
         </p>
         <p className="text-white text-base md:text-lg mt-6">
           {t(lang, 'hero_cta')}

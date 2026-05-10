@@ -38,7 +38,7 @@ export default function Plans() {
       <Navbar solid />
       <div className="pt-28 pb-16 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-widest text-white/60">{lang === 'pt-BR' ? 'PASSO 2 DE 3' : 'STEP 2 OF 3'}</p>
+          <p className="text-sm uppercase tracking-widest text-white/60">{lang === 'pt-BR' ? 'PASSO 2 DE 3' : lang === 'es' ? 'PASO 2 DE 3' : lang === 'fr' ? 'ÉTAPE 2 SUR 3' : lang === 'de' ? 'SCHRITT 2 VON 3' : lang === 'it' ? 'PASSO 2 DI 3' : lang === 'ja' ? 'ステップ 2 / 3' : 'STEP 2 OF 3'}</p>
           <h1 className="text-4xl md:text-6xl font-black mt-3" style={{ fontFamily: 'Inter, sans-serif' }}>
             {t(lang, 'plans_title')}
           </h1>
@@ -83,11 +83,11 @@ export default function Plans() {
                   <p className="text-3xl md:text-4xl font-black text-white mt-1">{yearly}</p>
                 </div>
                 <div className="p-4 bg-black/40 rounded-xl border border-white/5">
-                  <p className="text-white/60 text-xs uppercase tracking-wider">{lang === 'pt-BR' ? 'POR MÊS' : 'PER MONTH'}</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">{lang === 'pt-BR' ? 'POR MÊS' : lang === 'es' ? 'POR MES' : lang === 'fr' ? 'PAR MOIS' : lang === 'de' ? 'PRO MONAT' : lang === 'it' ? 'AL MESE' : lang === 'ja' ? '月額' : 'PER MONTH'}</p>
                   <p className="text-2xl md:text-3xl font-bold text-[#E50914] mt-1">{monthly}</p>
                 </div>
                 <div className="p-4 bg-black/40 rounded-xl border border-white/5">
-                  <p className="text-white/60 text-xs uppercase tracking-wider">{lang === 'pt-BR' ? 'POR DIA' : 'PER DAY'}</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">{lang === 'pt-BR' ? 'POR DIA' : lang === 'es' ? 'POR DÍA' : lang === 'fr' ? 'PAR JOUR' : lang === 'de' ? 'PRO TAG' : lang === 'it' ? 'AL GIORNO' : lang === 'ja' ? '1日あたり' : 'PER DAY'}</p>
                   <p className="text-2xl md:text-3xl font-bold text-yellow-300 mt-1">{daily}</p>
                 </div>
               </div>
