@@ -32,9 +32,12 @@ export default function Navbar({ solid = false }) {
       <div className="flex items-center justify-between px-4 md:px-14 py-4">
         <div className="flex items-center gap-8">
           <Link to="/" className="flex items-center">
-            <span className="text-[#E50914] font-black text-2xl md:text-3xl tracking-tight" style={{ fontFamily: 'Bebas Neue, Impact, sans-serif', letterSpacing: '0.02em' }}>
-              NETFLIX
-            </span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+              alt="Netflix"
+              className="h-6 md:h-8 w-auto select-none"
+              draggable={false}
+            />
           </Link>
           {user && (
             <nav className="hidden md:flex items-center gap-5 text-sm text-white/90">

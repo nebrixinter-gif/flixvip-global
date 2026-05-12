@@ -35,11 +35,22 @@ export default function Hero() {
           {t(lang, 'hero_title')}
         </h1>
         <p className="text-white text-xl md:text-2xl mt-5 font-medium">
-          {lang === 'pt-BR'
-            ? `Por apenas ${formatPrice(4.15, currency, lang)}/mês. Cancele quando quiser.`
-            : lang === 'es'
-            ? `Desde ${formatPrice(4.15, currency, lang)}/mes. Cancela cuando quieras.`
-            : `Starts at ${formatPrice(4.15, currency, lang)}/month. Cancel anytime.`}
+          {lang === 'pt-BR' ? (
+            <>
+              <span className="text-[#E50914] font-extrabold">RENOVE</span> sua assinatura para o{' '}
+              <span className="text-[#E50914] font-extrabold">PLANO PREMIUM</span> por apenas {formatPrice(4.15, currency, lang)}/mês.
+            </>
+          ) : lang === 'es' ? (
+            <>
+              <span className="text-[#E50914] font-extrabold">RENUEVA</span> tu suscripción al{' '}
+              <span className="text-[#E50914] font-extrabold">PLAN PREMIUM</span> por solo {formatPrice(4.15, currency, lang)}/mes.
+            </>
+          ) : (
+            <>
+              <span className="text-[#E50914] font-extrabold">RENEW</span> your subscription to the{' '}
+              <span className="text-[#E50914] font-extrabold">PREMIUM PLAN</span> for only {formatPrice(4.15, currency, lang)}/month.
+            </>
+          )}
         </p>
         <p className="text-white text-base md:text-lg mt-6">
           {t(lang, 'hero_cta')}

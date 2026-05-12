@@ -104,7 +104,7 @@ export default function Plans() {
               </ul>
 
               <a
-                href={KIWIFY_LINK}
+                href="https://pay.kiwify.com.br/8FZZ0hi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-10 block w-full text-center py-5 rounded-xl bg-[#E50914] hover:bg-[#f6121d] text-white text-xl font-black tracking-wide transition-colors shadow-[0_10px_40px_rgba(229,9,20,0.5)]"
