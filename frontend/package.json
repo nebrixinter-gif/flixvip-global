@@ -1,4 +1,7 @@
-{
+{{
+  "homepage": "https://nebrixinter-gif.github.io/flixvip-global",
+  ...
+}
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
