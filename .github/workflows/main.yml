@@ -1,4 +1,4 @@
-name: Deploy React App
+npm install --legacy-peer-deps
 
 on:
   push:
